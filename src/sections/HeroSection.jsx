@@ -94,27 +94,12 @@ export default function HeroSection() {
         className="absolute left-1/2 -translate-x-1/2 z-10 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px]"
       >
         <Magnet padding={150} strength={3}>
-          <div className="relative w-full aspect-square rounded-full overflow-hidden">
-            <div
-              className="absolute inset-0 rounded-full"
-              style={{
-                background:
-                  "radial-gradient(circle at 30% 30%, #BBCCD7 0%, #646973 40%, #0C0C0C 100%)",
-              }}
-            />
-            <div
-              className="absolute inset-0 rounded-full opacity-50"
-              style={{
-                background:
-                  "radial-gradient(circle at 70% 70%, rgba(182, 0, 168, 0.3) 0%, transparent 60%)",
-              }}
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-[#D7E2EA] font-black text-[80px] sm:text-[120px] md:text-[160px] opacity-20 select-none">
-                M
-              </span>
-            </div>
-          </div>
+          <img
+            src="/images/bitmoji.jpg"
+            alt="Mohamed Mufid K T"
+            className="w-full h-auto object-contain rounded-full"
+            loading="eager"
+          />
         </Magnet>
       </FadeIn>
 
