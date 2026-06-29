@@ -68,9 +68,6 @@ export default function TechStackSection() {
             <p className="text-[#D7E2EA]/60 font-light mt-2">
               College of Engineering Guindy (CEG), Anna University
             </p>
-            <p className="text-[#D7E2EA]/40 font-light text-sm mt-1">
-              CGPA: 7.83
-            </p>
           </div>
 
           <div className="border border-[#D7E2EA]/20 rounded-[30px] p-6 sm:p-8">
@@ -85,9 +82,6 @@ export default function TechStackSection() {
             </h3>
             <p className="text-[#D7E2EA]/60 font-light mt-2">
               Mohamed Sathak College of Arts and Science
-            </p>
-            <p className="text-[#D7E2EA]/40 font-light text-sm mt-1">
-              CGPA: 7.467
             </p>
           </div>
         </div>
@@ -113,4 +107,13 @@ export default function TechStackSection() {
               href="https://codeforces.com/profile/mohamedmufid1"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#D7E2EA] font-medium uppercase tracki
+              className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm sm:text-base hover:text-[#BBCCD7] transition-colors duration-200"
+            >
+              Codeforces
+            </a>
+          </div>
+        </div>
+      </FadeIn>
+    </section>
+  );
+}
