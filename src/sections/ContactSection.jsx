@@ -35,7 +35,7 @@ export default function ContactSection() {
           >
             mohamedmufid1@outlook.com
           </a>
-          <div className="flex items-center gap-4 sm:gap-6">
+          <div className="flex items-center gap-4 sm:gap-6 flex-wrap justify-center">
             <a
               href="https://github.com/iMufix"
               target="_blank"
@@ -45,12 +45,28 @@ export default function ContactSection() {
               GitHub
             </a>
             <a
-              href="https://leetcode.com/u/Mufix7/"
+              href="https://www.linkedin.com/in/mohamed-mufid-023b55256"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D7E2EA]/60 font-medium text-sm uppercase tracking-wider hover:text-[#D7E2EA] transition-colors duration-200"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="https://leetcode.com/u/Mufix7"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#D7E2EA]/60 font-medium text-sm uppercase tracking-wider hover:text-[#D7E2EA] transition-colors duration-200"
             >
               LeetCode
+            </a>
+            <a
+              href="https://codeforces.com/profile/mohamedmufid1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D7E2EA]/60 font-medium text-sm uppercase tracking-wider hover:text-[#D7E2EA] transition-colors duration-200"
+            >
+              Codeforces
             </a>
           </div>
         </div>

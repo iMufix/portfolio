@@ -114,6 +114,59 @@ export default function TechStackSection() {
           </div>
         </div>
       </FadeIn>
+      {/* Certifications */}
+      <FadeIn delay={0.45} y={30}>
+        <div className="max-w-5xl mx-auto mt-12 sm:mt-16">
+          <p className="text-[#D7E2EA]/40 font-medium uppercase tracking-wider text-sm mb-6 text-center">
+            Certifications
+          </p>
+          <div className="border border-[#D7E2EA]/20 rounded-[30px] p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <h3
+                className="text-[#D7E2EA] font-bold"
+                style={{ fontSize: "clamp(1.1rem, 2vw, 1.5rem)" }}
+              >
+                MERN Stack Development
+              </h3>
+              <p className="text-[#D7E2EA]/60 font-light mt-1">
+                Pumo Technovation
+              </p>
+            </div>
+            <span className="text-[#D7E2EA]/30 font-medium text-sm uppercase tracking-wider">
+              In Progress
+            </span>
+          </div>
+        </div>
+      </FadeIn>
+
+      {/* Connect */}
+      <FadeIn delay={0.5} y={30}>
+        <div className="max-w-5xl mx-auto mt-12 sm:mt-16 text-center">
+          <p className="text-[#D7E2EA]/40 font-medium uppercase tracking-wider text-sm mb-4">
+            Connect
+          </p>
+          <div className="flex items-center justify-center gap-6 sm:gap-8 flex-wrap">
+            <a
+              href="https://www.linkedin.com/in/mohamed-mufid-023b55256"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm sm:text-base hover:text-[#BBCCD7] transition-colors duration-200"
+            >
+              LinkedIn
+            </a>
+            <span className="text-[#D7E2EA]/20">|</span>
+            <a
+              href="https://github.com/iMufix"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D7E2EA] font-medium uppercase tracking-wider text-sm sm:text-base hover:text-[#BBCCD7] transition-colors duration-200"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+      </FadeIn>
+
     </section>
   );
 }

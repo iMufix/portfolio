@@ -1,6 +1,7 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import LiveProjectButton from "../components/LiveProjectButton";
+import ProjectModal from "../components/ProjectModal";
 
 const projects = [
   {
@@ -62,6 +63,7 @@ const projects = [
 ];
 
 export default function ProjectsSection() {
+  const [selectedProject, setSelectedProject] = useState(null);
   const containerRef = useRef(null);
 
   return (
@@ -83,14 +85,21 @@ export default function ProjectsSection() {
             project={project}
             index={index}
             totalCards={projects.length}
+            onSelect={() => setSelectedProject(project)}
           />
         ))}
       </div>
+
+      <ProjectModal
+        project={selectedProject}
+        isOpen={!!selectedProject}
+        onClose={() => setSelectedProject(null)}
+      />
     </section>
   );
 }
 
-function ProjectCard({ project, index, totalCards }) {
+function ProjectCard({ project, index, totalCards, onSelect }) {
   const cardRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: cardRef,
@@ -147,8 +156,16 @@ function ProjectCard({ project, index, totalCards }) {
           {project.description}
         </p>
 
-        {/* Image Grid */}
-        <div className="flex gap-4 flex-1 min-h-0">
+        {/* Image Grid + Click overlay */}
+        <div
+          className="flex gap-4 flex-1 min-h-0 cursor-pointer relative group"
+          onClick={onSelect}
+        >
+          <div className="absolute inset-0 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span className="text-[#D7E2EA] font-medium uppercase tracking-widest text-sm bg-[#0C0C0C]/80 backdrop-blur-sm px-6 py-3 rounded-full border border-[#D7E2EA]/30">
+              View Details
+            </span>
+          </div>
           <div className="w-[40%] flex flex-col gap-4">
             <div
               className="rounded-[40px] sm:rounded-[50px] md:rounded-[60px] w-full"

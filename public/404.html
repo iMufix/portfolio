@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 -- Not Found</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html, body {
+        background-color: #0C0C0C;
+        font-family: "Kanit", sans-serif;
+        color: #D7E2EA;
+        min-height: 100vh;
+      }
+      .container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+      .heading {
+        background: linear-gradient(180deg, #646973 0%, #BBCCD7 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: clamp(4rem, 15vw, 200px);
+        line-height: 1;
+      }
+      .subtitle {
+        font-weight: 300;
+        text-align: center;
+        margin-top: 16px;
+        max-width: 500px;
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        color: #D7E2EA;
+      }
+      .btn {
+        margin-top: 32px;
+        border-radius: 9999px;
+        border: 2px solid #D7E2EA;
+        padding: 12px 32px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #D7E2EA;
+        background: transparent;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.2s;
+      }
+      .btn:hover {
+        background-color: rgba(215, 226, 234, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">404</h1>
+      <p class="subtitle">Page not found. Let&apos;s get you back on track.</p>
+      <a href="/" class="btn">Back to Home</a>
+    </div>
+  </body>
+</html>
