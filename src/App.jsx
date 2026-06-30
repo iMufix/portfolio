@@ -1,4 +1,6 @@
 import SplashCursor from "./components/SplashCursor";
+import ScrollProgress from "./components/ScrollProgress";
+import BackToTop from "./components/BackToTop";
 import HeroSection from "./sections/HeroSection";
 import MarqueeSection from "./sections/MarqueeSection";
 import AboutSection from "./sections/AboutSection";
@@ -11,6 +13,7 @@ function App() {
   return (
     <div className="main-wrapper">
       <SplashCursor />
+      <ScrollProgress />
       <HeroSection />
       <MarqueeSection />
       <AboutSection />
@@ -18,6 +21,7 @@ function App() {
       <TechStackSection />
       <ProjectsSection />
       <ContactSection />
+      <BackToTop />
     </div>
   );
 }
