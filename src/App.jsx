@@ -2,11 +2,14 @@ import SplashCursor from "./components/SplashCursor";
 import ScrollProgress from "./components/ScrollProgress";
 import BackToTop from "./components/BackToTop";
 import HeroSection from "./sections/HeroSection";
+import StatsBar from "./sections/StatsBar";
 import MarqueeSection from "./sections/MarqueeSection";
 import AboutSection from "./sections/AboutSection";
 import SkillsSection from "./sections/SkillsSection";
 import TechStackSection from "./sections/TechStackSection";
+import TimelineSection from "./sections/TimelineSection";
 import ProjectsSection from "./sections/ProjectsSection";
+import HobbiesSection from "./sections/HobbiesSection";
 import ContactSection from "./sections/ContactSection";
 
 function App() {
@@ -15,11 +18,14 @@ function App() {
       <SplashCursor />
       <ScrollProgress />
       <HeroSection />
+      <StatsBar />
       <MarqueeSection />
       <AboutSection />
       <SkillsSection />
       <TechStackSection />
+      <TimelineSection />
       <ProjectsSection />
+      <HobbiesSection />
       <ContactSection />
       <BackToTop />
     </div>
