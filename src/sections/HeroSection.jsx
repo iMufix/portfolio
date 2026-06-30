@@ -1,13 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import FadeIn from "../components/FadeIn";
 import Magnet from "../components/Magnet";
 import ContactButton from "../components/ContactButton";
 import FlowingMenu from "../components/FlowingMenu";
 
 const navLinks = ["About", "Skills", "Projects", "Contact"];
+const roles = [
+  "Software Developer",
+  "Full Stack Developer",
+  "Flutter Developer",
+  "AI Enthusiast",
+];
 
 export default function HeroSection() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
 
   const handleNavClick = (link) => {
     const id = link.toLowerCase();
@@ -17,6 +27,40 @@ export default function HeroSection() {
     }
     setMenuOpen(false);
   };
+
+  useEffect(() => {
+    const currentRole = roles[roleIndex];
+    const typeSpeed = isDeleting ? 40 : 60;
+    const pauseTime = 2000;
+
+    let timeout;
+
+    if (isPaused) {
+      timeout = setTimeout(() => {
+        setIsPaused(false);
+        setIsDeleting(true);
+      }, pauseTime);
+    } else if (isDeleting) {
+      if (displayText === "") {
+        setIsDeleting(false);
+        setRoleIndex((prev) => (prev + 1) % roles.length);
+      } else {
+        timeout = setTimeout(() => {
+          setDisplayText((prev) => prev.slice(0, -1));
+        }, typeSpeed);
+      }
+    } else {
+      if (displayText === currentRole) {
+        setIsPaused(true);
+      } else {
+        timeout = setTimeout(() => {
+          setDisplayText(currentRole.slice(0, displayText.length + 1));
+        }, typeSpeed);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, isPaused, roleIndex]);
 
   return (
     <section
@@ -87,11 +131,34 @@ export default function HeroSection() {
         </FadeIn>
       </div>
 
-      {/* Portrait Placeholder */}
+      {/* Typing Role */}
+      <FadeIn delay={0.35} y={20}>
+        <div className="text-center mt-2 sm:mt-4">
+          <p className="text-[#D7E2EA] font-medium uppercase tracking-widest text-sm sm:text-base md:text-lg">
+            {displayText}
+            <span className="animate-pulse text-[#B600A8]">|</span>
+          </p>
+        </div>
+      </FadeIn>
+
+      {/* Availability Badge */}
+      <FadeIn delay={0.45} y={20}>
+        <div className="flex items-center justify-center gap-2 mt-3 sm:mt-4">
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+          </span>
+          <span className="text-green-400 font-medium text-xs sm:text-sm uppercase tracking-wider">
+            Open to internships & full-time roles
+          </span>
+        </div>
+      </FadeIn>
+
+      {/* Hero Portrait */}
       <FadeIn
         delay={0.6}
         y={30}
-        className="absolute left-1/2 -translate-x-1/2 z-10 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px]"
+        className="absolute left-1/2 -translate-x-1/2 z-10 top-[55%] sm:top-[50%] md:top-[52%] -translate-y-1/2 sm:translate-y-0 sm:bottom-0 w-[200px] sm:w-[280px] md:w-[360px] lg:w-[420px]"
       >
         <Magnet padding={150} strength={3}>
           <img
@@ -115,7 +182,16 @@ export default function HeroSection() {
         </FadeIn>
 
         <FadeIn delay={0.5} y={20}>
-          <ContactButton label="Get in Touch" />
+          <div className="flex items-center gap-3 sm:gap-4">
+            <a
+              href="/resume.pdf"
+              download
+              className="rounded-full border-2 border-[#D7E2EA] px-6 py-3 sm:px-8 sm:py-3.5 text-xs sm:text-sm font-medium uppercase tracking-widest text-[#D7E2EA] cursor-pointer hover:bg-[#D7E2EA]/10 transition-colors duration-200"
+            >
+              Resume
+            </a>
+            <ContactButton label="Get in Touch" />
+          </div>
         </FadeIn>
       </div>
     </section>
