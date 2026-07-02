@@ -162,9 +162,9 @@ export default function HeroSection() {
       >
         <Magnet padding={150} strength={3}>
           <img
-            src="/images/bitmoji.jpg"
+            src="/images/bitmoji.png"
             alt="Mohamed Mufid K T"
-            className="w-full h-auto object-contain rounded-full"
+            className="w-full h-auto object-contain"
             loading="eager"
           />
         </Magnet>
