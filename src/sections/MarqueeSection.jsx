@@ -2,124 +2,68 @@ function double(array) {
   return [...array, ...array];
 }
 
-const cardGradients = [
-  "linear-gradient(135deg, #18011F 0%, #2D0A33 50%, #B600A8 100%)",
-  "linear-gradient(135deg, #0C0C0C 0%, #1a1a2e 50%, #16213e 100%)",
-  "linear-gradient(135deg, #B600A8 0%, #7621B0 50%, #4a148c 100%)",
-  "linear-gradient(135deg, #18011F 0%, #330033 50%, #660066 100%)",
-  "linear-gradient(135deg, #0C0C0C 0%, #141e30 50%, #243b55 100%)",
-  "linear-gradient(135deg, #7621B0 0%, #9c27b0 50%, #e040fb 100%)",
-  "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)",
-  "linear-gradient(135deg, #B600A8 0%, #ff00ff 50%, #ff00cc 100%)",
-  "linear-gradient(135deg, #0C0C0C 0%, #1b1b2f 50%, #2d2d44 100%)",
-  "linear-gradient(135deg, #18011F 0%, #3d0c40 50%, #5e1562 100%)",
+const techLogos = [
+  { name: "React", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+  { name: "Node.js", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+  { name: "Flutter", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
+  { name: "JavaScript", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+  { name: "TypeScript", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+  { name: "Python", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+  { name: "Java", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+  { name: "Dart", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" },
+  { name: "MongoDB", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { name: "PostgreSQL", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+  { name: "Firebase", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
+  { name: "Git", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+  { name: "Docker", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+  { name: "Express", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+  { name: "HTML5", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+  { name: "CSS3", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+  { name: "Tailwind", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
+  { name: "OpenAI", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/openai/openai-original.svg" },
+  { name: "GitHub", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+  { name: "Linux", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
 ];
 
-function MarqueeCard({ gradient, label, icon }) {
+const row1 = techLogos.slice(0, 10);
+const row2 = techLogos.slice(10);
+
+function MarqueeCard({ tech }) {
   return (
-    <div
-      className="w-[420px] h-[270px] rounded-2xl flex-shrink-0 relative overflow-hidden flex items-center justify-center"
-      style={{ background: gradient }}
-    >
-      {/* Abstract circles */}
-      <div
-        className="absolute rounded-full opacity-20"
-        style={{
-          width: "180px",
-          height: "180px",
-          top: "-40px",
-          right: "-40px",
-          background: "radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%)",
-        }}
-      />
-      <div
-        className="absolute rounded-full opacity-15"
-        style={{
-          width: "120px",
-          height: "120px",
-          bottom: "-30px",
-          left: "-30px",
-          background: "radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%)",
-        }}
-      />
-      {/* Dots pattern */}
-      <div
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage: "radial-gradient(circle, #D7E2EA 1px, transparent 1px)",
-          backgroundSize: "20px 20px",
-        }}
-      />
-      {/* Content */}
-      <div className="relative z-10 text-center px-8">
-        {icon && (
-          <div className="text-[#D7E2EA]/40 text-5xl mb-3 font-black tracking-tighter">
-            {icon}
-          </div>
-        )}
-        <span className="text-[#D7E2EA] font-bold uppercase tracking-widest text-sm">
-          {label}
-        </span>
+    <div className="w-[200px] h-[200px] sm:w-[220px] sm:h-[220px] rounded-2xl flex-shrink-0 relative overflow-hidden flex flex-col items-center justify-center group"
+      style={{
+        background: "linear-gradient(145deg, #141416 0%, #1c1c1e 100%)",
+        boxShadow: "0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)",
+        border: "1px solid rgba(215, 226, 234, 0.08)",
+      }}>
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        style={{ background: "radial-gradient(circle at 50% 30%, rgba(182, 0, 168, 0.15) 0%, transparent 60%)" }} />
+      <div className="absolute top-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-[#B600A8]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="relative z-10 flex flex-col items-center">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 mb-3 relative" style={{ filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.5))", transform: "translateZ(0)" }}>
+          <img src={tech.url} alt={tech.name} className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110" loading="lazy" />
+        </div>
+        <span className="text-[#D7E2EA]/60 font-medium uppercase tracking-wider text-[10px] sm:text-xs group-hover:text-[#D7E2EA]/90 transition-colors duration-300">{tech.name}</span>
       </div>
     </div>
   );
 }
 
-const row1Cards = [
-  { gradient: cardGradients[0], label: "React", icon: "</>" },
-  { gradient: cardGradients[1], label: "Node.js", icon: "{}" },
-  { gradient: cardGradients[2], label: "Flutter", icon: "F" },
-  { gradient: cardGradients[3], label: "AI/ML", icon: "AI" },
-  { gradient: cardGradients[4], label: "Full Stack", icon: "FS" },
-  { gradient: cardGradients[5], label: "Mobile", icon: "M" },
-  { gradient: cardGradients[6], label: "Backend", icon: "B" },
-  { gradient: cardGradients[7], label: "Design", icon: "D" },
-  { gradient: cardGradients[8], label: "Database", icon: "DB" },
-  { gradient: cardGradients[9], label: "Cloud", icon: "C" },
-  { gradient: cardGradients[0], label: "API", icon: "API" },
-];
-
-const row2Cards = [
-  { gradient: cardGradients[5], label: "Java", icon: "J" },
-  { gradient: cardGradients[6], label: "Python", icon: "Py" },
-  { gradient: cardGradients[7], label: "TypeScript", icon: "TS" },
-  { gradient: cardGradients[8], label: "Dart", icon: "Dt" },
-  { gradient: cardGradients[9], label: "Git", icon: "G" },
-  { gradient: cardGradients[0], label: "Docker", icon: "Do" },
-  { gradient: cardGradients[1], label: "Firebase", icon: "Fb" },
-  { gradient: cardGradients[2], label: "MongoDB", icon: "Mg" },
-  { gradient: cardGradients[3], label: "PostgreSQL", icon: "Pg" },
-  { gradient: cardGradients[4], label: "OpenAI", icon: "O" },
-];
-
 export default function MarqueeSection() {
   return (
     <section className="bg-[#0C0C0C] pt-24 sm:pt-32 md:pt-40 pb-10 overflow-hidden">
-      <div className="flex flex-col gap-3">
-        {/* Row 1 - moves RIGHT */}
+      <div className="flex flex-col gap-4">
         <div className="overflow-hidden">
-          <div className="carousel-track flex gap-3 w-max">
-            {double(row1Cards).map((card, i) => (
-              <MarqueeCard
-                key={i}
-                gradient={card.gradient}
-                label={card.label}
-                icon={card.icon}
-              />
+          <div className="carousel-track flex gap-4 w-max">
+            {double(row1).map((tech, i) => (
+              <MarqueeCard key={i} tech={tech} />
             ))}
           </div>
         </div>
-
-        {/* Row 2 - moves LEFT */}
         <div className="overflow-hidden">
-          <div className="carousel-track-reverse flex gap-3 w-max">
-            {double(row2Cards).map((card, i) => (
-              <MarqueeCard
-                key={i}
-                gradient={card.gradient}
-                label={card.label}
-                icon={card.icon}
-              />
+          <div className="carousel-track-reverse flex gap-4 w-max">
+            {double(row2).map((tech, i) => (
+              <MarqueeCard key={i} tech={tech} />
             ))}
           </div>
         </div>

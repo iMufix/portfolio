@@ -32,6 +32,61 @@ const hobbies = [
     ),
     desc: "Tech, psychology & fiction",
   },
+  {
+    name: "Petrol Head",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+        <circle cx="7" cy="17" r="2" />
+        <circle cx="17" cy="17" r="2" />
+      </svg>
+    ),
+    desc: "Cars, engines & automotive culture",
+  },
+  {
+    name: "Food Blogging",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+        <path d="M7 2v20" />
+        <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+      </svg>
+    ),
+    desc: "Exploring flavors & food photography",
+  },
+  {
+    name: "Fitness & Gym",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M6.5 6.5h11M6.5 17.5h11M6 20v-2a6 6 0 1 1 12 0v2" />
+        <path d="M6 8v2a6 6 0 0 0 12 0V8" />
+      </svg>
+    ),
+    desc: "Strength training & discipline",
+  },
+  {
+    name: "Tech Blogging",
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+        <polyline points="14 2 14 8 20 8" />
+        <line x1="16" y1="13" x2="8" y2="13" />
+        <line x1="16" y1="17" x2="8" y2="17" />
+        <line x1="10" y1="9" x2="8" y2="9" />
+      </svg>
+    ),
+    desc: "Writing about tech trends & tools",
+  },
+];
+
+const orbColors = [
+  "radial-gradient(circle, #B600A8 0%, transparent 70%)",
+  "radial-gradient(circle, #7621B0 0%, transparent 70%)",
+  "radial-gradient(circle, #BBCCD7 0%, transparent 70%)",
+  "radial-gradient(circle, #BE4C00 0%, transparent 70%)",
+  "radial-gradient(circle, #B600A8 0%, transparent 70%)",
+  "radial-gradient(circle, #7621B0 0%, transparent 70%)",
+  "radial-gradient(circle, #BBCCD7 0%, transparent 70%)",
 ];
 
 export default function HobbiesSection() {
@@ -43,14 +98,14 @@ export default function HobbiesSection() {
       <FadeIn delay={0.1} y={20}>
         <p className="text-[#D7E2EA]/40 font-light text-center mb-16 sm:mb-20 md:mb-28 max-w-md mx-auto">What I do when I&apos;m not building software</p>
       </FadeIn>
-      <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
         {hobbies.map((hobby, index) => (
-          <FadeIn key={hobby.name} delay={index * 0.15} y={30}>
+          <FadeIn key={hobby.name} delay={index * 0.1} y={30}>
             <motion.div whileHover={{ y: -12, scale: 1.03 }} transition={{ type: "spring", stiffness: 300, damping: 20 }} className="relative group cursor-default">
               <div className="relative rounded-[30px] sm:rounded-[40px] border border-[#D7E2EA]/10 bg-[#0C0C0C] p-8 sm:p-10 text-center overflow-hidden h-full"
                 style={{ boxShadow: "0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)" }}>
                 <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 w-24 h-24 rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-700 blur-xl"
-                  style={{ background: index === 0 ? "radial-gradient(circle, #B600A8 0%, transparent 70%)" : index === 1 ? "radial-gradient(circle, #7621B0 0%, transparent 70%)" : "radial-gradient(circle, #BBCCD7 0%, transparent 70%)" }} />
+                  style={{ background: orbColors[index % orbColors.length] }} />
                 <div className="absolute inset-0 rounded-[30px] sm:rounded-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   style={{ boxShadow: "inset 0 0 0 1px rgba(182, 0, 168, 0.2), 0 0 40px rgba(182, 0, 168, 0.1)" }} />
                 <div className="relative z-10">
