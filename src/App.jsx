@@ -15,22 +15,24 @@ import ContactSection from "./sections/ContactSection";
 
 function App() {
   return (
-    <div className="main-wrapper">
+    <>
       <SplashCursor />
       <ScrollProgress />
-      <HeroSection />
-      <StatsBar />
-      <MarqueeSection />
-      <AboutSection />
-      <SkillsSection />
-      <TechStackSection />
-      <TimelineSection />
-      <ProjectsSection />
-      <HobbiesSection />
-      <StayUpdatedSection />
-      <ContactSection />
       <BackToTop />
-    </div>
+      <div className="main-wrapper">
+        <HeroSection />
+        <StatsBar />
+        <MarqueeSection />
+        <AboutSection />
+        <SkillsSection />
+        <TechStackSection />
+        <TimelineSection />
+        <ProjectsSection />
+        <HobbiesSection />
+        <StayUpdatedSection />
+        <ContactSection />
+      </div>
+    </>
   );
 }
 
