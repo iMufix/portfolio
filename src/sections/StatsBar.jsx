@@ -9,6 +9,9 @@ const stats = [
   { number: "Chennai", label: "India", suffix: "" },
 ];
 
+const getStatFontSize = (value) =>
+  value.length > 4 ? "clamp(1.35rem, 2.7vw, 2.25rem)" : "clamp(1.8rem, 4vw, 3rem)";
+
 export default function StatsBar() {
   return (
     <section className="bg-[#0C0C0C] px-5 sm:px-8 md:px-10 py-12 sm:py-16 md:py-20">
@@ -41,7 +44,7 @@ export default function StatsBar() {
                   <div className="relative z-10">
                     <span
                       className="hero-heading font-black block"
-                      style={{ fontSize: "clamp(1.8rem, 4vw, 3rem)", lineHeight: 1 }}
+                      style={{ fontSize: getStatFontSize(stat.number), lineHeight: 1 }}
                     >
                       {stat.number}
                       {stat.suffix && (
