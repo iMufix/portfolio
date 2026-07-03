@@ -20,7 +20,7 @@ const techLogos = [
   { name: "HTML5", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
   { name: "CSS3", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
   { name: "Tailwind", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
-  { name: "OpenAI", url: "https://skillicons.dev/icons?i=openai" },
+  { name: "OpenAI", url: "https://skillicons.dev/icons?i=openai", invert: true },
   { name: "GitHub", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
   { name: "Linux", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
 ];
@@ -41,7 +41,7 @@ function MarqueeCard({ tech }) {
       <div className="absolute top-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-[#B600A8]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <div className="relative z-10 flex flex-col items-center">
         <div className="w-16 h-16 sm:w-20 sm:h-20 mb-3 relative" style={{ filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.5))", transform: "translateZ(0)" }}>
-          <img src={tech.url} alt={tech.name} className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110" loading="lazy" />
+          <img src={tech.url} alt={tech.name} className={`w-full h-full object-contain transition-transform duration-300 group-hover:scale-110 ${tech.invert ? "invert" : ""}`} loading="lazy" />
         </div>
         <span className="text-[#D7E2EA]/60 font-medium uppercase tracking-wider text-[10px] sm:text-xs group-hover:text-[#D7E2EA]/90 transition-colors duration-300">{tech.name}</span>
       </div>
