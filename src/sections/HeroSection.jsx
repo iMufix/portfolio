@@ -11,6 +11,7 @@ const roles = [
   "Flutter Developer",
   "AI Enthusiast",
 ];
+const bitmojiSrc = `${import.meta.env.BASE_URL}images/bitmoji.png`;
 
 export default function HeroSection() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -162,7 +163,7 @@ export default function HeroSection() {
       >
         <Magnet padding={150} strength={3}>
           <img
-            src="/images/bitmoji.png"
+            src={bitmojiSrc}
             alt="Mohamed Mufid K T"
             className="w-full h-auto object-contain"
             loading="eager"
