@@ -20,8 +20,8 @@ const techLogos = [
   { name: "HTML5", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
   { name: "CSS3", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
   { name: "Tailwind", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
-  { name: "OpenAI", url: "https://skillicons.dev/icons?i=openai", invert: true },
-  { name: "GitHub", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+  { name: "OpenAI", url: "https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/openai.svg", invert: true },
+  { name: "GitHub", url: "https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/github.svg", invert: true },
   { name: "Linux", url: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
 ];
 

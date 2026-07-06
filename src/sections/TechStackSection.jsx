@@ -18,6 +18,11 @@ const techStack = [
   { name: "Docker", color: "#2496ED" },
   { name: "OpenAI API", color: "#10A37F" },
   { name: "Gemini API", color: "#4285F4" },
+  { name: "NumPy", color: "#013243" },
+  { name: "Pandas", color: "#150458" },
+  { name: "Matplotlib", color: "#11557C" },
+  { name: "Seaborn", color: "#7DB3D1" },
+  { name: "Scikit-Learn", color: "#F7931E" },
 ];
 
 export default function TechStackSection() {
