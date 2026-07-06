@@ -21,7 +21,7 @@ export default function ContactSection() {
           className="text-[#D7E2EA] font-light text-center leading-relaxed max-w-[560px]"
           style={{ fontSize: "clamp(1rem, 2vw, 1.35rem)" }}
         >
-           Looking for a backend engineer who can design robust APIs and scalable systems? I&apos;m open to internships and full-time opportunities. Let&apos;s build reliable infrastructure together.
+           I build across the stack with a backend edge. Open to internships and full-time opportunities — let&apos;s create something impactful together.
         </p>
       </FadeIn>
 

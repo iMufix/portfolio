@@ -3,33 +3,33 @@ import FadeIn from "../components/FadeIn";
 const skills = [
   {
     number: "01",
-    name: "Backend Architecture",
+    name: "Full Stack Development",
     description:
-      "Designing scalable server-side systems with layered architecture, middleware pipelines, and optimized request handling using Node.js, Express, and microservices patterns.",
+      "Building complete applications with React frontends, Node.js/Express backends, and database integration. Delivering end-to-end solutions from UI to server logic.",
   },
   {
     number: "02",
-    name: "API Design & Development",
+    name: "Mobile Development",
     description:
-      "Building RESTful and GraphQL APIs with structured endpoints, input validation, rate limiting, and comprehensive error handling for reliable client-server communication.",
+      "Cross-platform mobile apps with Flutter and Dart. Firebase integration for real-time sync, authentication, and cloud functions. Deployed on both Android and iOS.",
   },
   {
     number: "03",
-    name: "Database Engineering",
+    name: "Backend Architecture",
     description:
-      "Schema design, indexing, and query optimization across SQL (PostgreSQL) and NoSQL (MongoDB) databases. Proficient in relationships, aggregations, and data integrity.",
+      "Designing scalable server-side systems with RESTful APIs, middleware pipelines, authentication, and optimized request handling using Node.js, Express, and PostgreSQL.",
   },
   {
     number: "04",
-    name: "System Design",
+    name: "API Design & Integration",
     description:
-      "Architecting distributed systems with load balancing, caching strategies, message queues, and horizontal scaling considerations. Focused on reliability, latency, and throughput.",
+      "Building structured API endpoints with validation, error handling, and rate limiting. Integrating third-party services like OpenAI, Gemini, and Firebase into applications.",
   },
   {
     number: "05",
-    name: "Cloud & DevOps",
+    name: "Database & Cloud",
     description:
-      "Deploying and managing applications on cloud platforms. Experience with Docker containerization, CI/CD pipelines, environment configuration, and monitoring.",
+      "Schema design and query optimization across PostgreSQL and MongoDB. Deploying with Docker, managing environments, and setting up CI/CD pipelines for reliable releases.",
   },
 ];
 

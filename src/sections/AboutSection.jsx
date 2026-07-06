@@ -3,7 +3,7 @@ import ContactButton from "../components/ContactButton";
 import AnimatedText from "../components/AnimatedText";
 
 const aboutText =
-  "Master of Computer Applications student at CEG, Anna University. Passionate about designing robust backend systems, scalable APIs, and seamless data flows. With experience across RESTful services, database architecture, and cloud connectivity, I build the infrastructure that powers great products.";
+  "Master of Computer Applications student at CEG, Anna University. I build software across the stack — from Flutter mobile apps to React frontends — but my strength lies in backend engineering: designing RESTful APIs, architecting databases, and connecting systems. Let's build something impactful together.";
 
 export default function AboutSection() {
   return (
