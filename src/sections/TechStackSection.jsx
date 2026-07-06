@@ -107,12 +107,31 @@ export default function TechStackSection() {
       <FadeIn delay={0.45} y={30}>
         <div className="max-w-5xl mx-auto mt-12 sm:mt-16">
           <p className="text-[#D7E2EA]/40 font-medium uppercase tracking-wider text-sm mb-6 text-center">Certifications</p>
-          <div className="border border-[#D7E2EA]/20 rounded-[30px] p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a
+              href="https://ude.my/UC-25e5ed85-a854-4497-bfdb-31c211f6cb25"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-[#B600A8]/30 rounded-[30px] p-6 sm:p-8 flex flex-col justify-between gap-4 hover:border-[#B600A8]/60 hover:bg-[#B600A8]/5 transition-colors duration-200"
+            >
+              <div>
+                <span className="text-[#B600A8] font-medium text-xs uppercase tracking-wider">Udemy | Completed</span>
+                <h3 className="text-[#D7E2EA] font-bold mt-2" style={{ fontSize: "clamp(1.1rem, 2vw, 1.5rem)" }}>Flutter & Dart - The Complete Guide</h3>
+                <p className="text-[#D7E2EA]/60 font-light mt-1">Academind by Maximilian Schwarzmuller</p>
+              </div>
+              <div className="flex items-center justify-between gap-4 flex-wrap">
+                <span className="text-[#D7E2EA]/40 font-medium text-sm uppercase tracking-wider">July 2026 | 30 hours</span>
+                <span className="text-[#D7E2EA] font-medium text-sm uppercase tracking-wider">Verify</span>
+              </div>
+            </a>
+
+            <div className="border border-[#D7E2EA]/20 rounded-[30px] p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
               <h3 className="text-[#D7E2EA] font-bold" style={{ fontSize: "clamp(1.1rem, 2vw, 1.5rem)" }}>MERN Stack Development</h3>
               <p className="text-[#D7E2EA]/60 font-light mt-1">Pumo Technovation</p>
             </div>
             <span className="text-[#D7E2EA]/30 font-medium text-sm uppercase tracking-wider">In Progress</span>
+            </div>
           </div>
         </div>
       </FadeIn>
