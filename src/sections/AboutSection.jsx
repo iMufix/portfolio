@@ -3,7 +3,7 @@ import ContactButton from "../components/ContactButton";
 import AnimatedText from "../components/AnimatedText";
 
 const aboutText =
-  "Master of Computer Applications student at CEG, Anna University. Passionate about building software that solves real problems. With experience across Full Stack, Mobile, and AI, I create products that make a difference. Let's build something incredible together!";
+  "Master of Computer Applications student at CEG, Anna University. Passionate about designing robust backend systems, scalable APIs, and seamless data flows. With experience across RESTful services, database architecture, and cloud connectivity, I build the infrastructure that powers great products.";
 
 export default function AboutSection() {
   return (

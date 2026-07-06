@@ -5,7 +5,7 @@ const milestones = [
   { year: "2021", title: "Started BCA", desc: "Mohamed Sathak College of Arts and Science", side: "left" },
   { year: "2024", title: "BCA Complete", desc: "Organized Web Development Workshop", side: "right" },
   { year: "2025", title: "Started MCA", desc: "CEG, Anna University + MERN Certification", side: "left" },
-  { year: "2027", title: "MCA Complete", desc: "Targeting internships & full-time roles", side: "right", projected: true },
+  { year: "2027", title: "MCA Complete", desc: "Seeking backend engineering roles", side: "right", projected: true },
 ];
 
 export default function TimelineSection() {

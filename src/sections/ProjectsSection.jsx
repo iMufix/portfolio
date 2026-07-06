@@ -6,11 +6,11 @@ import ProjectModal from "../components/ProjectModal";
 const projects = [
   {
     number: "01",
-    category: "Full Stack",
+    category: "Backend + API",
     name: "Presetify",
     tech: "MERN, PostgreSQL, OpenAI API",
     description:
-      "A community-driven platform for discovering, sharing, and rating equalizer presets for audio devices and platforms. Users can search, contribute, and rate presets across headphones, speakers, cars, and streaming services.",
+      "Community-driven platform with a RESTful backend for discovering, sharing, and rating audio presets. Features relational database schema design, API endpoints for CRUD operations, search with filtering, and third-party API integration for AI-powered recommendations.",
     github: "https://github.com/iMufix/Presetify",
     images: [
       "linear-gradient(135deg, #18011F 0%, #B600A8 50%, #7621B0 100%)",
@@ -20,11 +20,11 @@ const projects = [
   },
   {
     number: "02",
-    category: "Mobile + AI",
+    category: "API + Mobile",
     name: "Vitaboo",
     tech: "Flutter, Firebase, OpenAI API",
     description:
-      "AI-powered mobile application for self-health diagnostics and wellness guidance. Users get intelligent health insights and recommendations through an intuitive Flutter interface.",
+      "Health diagnostics platform with cloud-connected backend using Firebase for real-time data sync, authentication, and serverless functions. OpenAI API integration powers intelligent health insights through structured API request-response flows.",
     github: "https://github.com/iMufix/Vitaboo",
     images: [
       "linear-gradient(135deg, #0C0C0C 0%, #646973 50%, #BBCCD7 100%)",
@@ -32,13 +32,13 @@ const projects = [
       "linear-gradient(135deg, #D7E2EA 0%, #646973 50%, #0C0C0C 100%)",
     ],
   },
-  {
+    {
     number: "03",
-    category: "Full Stack + AI",
+    category: "Backend + AI",
     name: "Grievance System",
     tech: "MERN, OpenAI API",
     description:
-      "Role-based university grievance management platform with Admin and Officer dashboards. Features complaint tracking, feedback, proof upload, and an AI chatbot for assistance.",
+      "Role-based university grievance management platform with a robust backend featuring JWT authentication middleware, role-based access control, file upload endpoints, and an AI-powered chatbot API for automated assistance and ticket resolution.",
     github: "https://github.com/iMufix/grievance_system_uni",
     images: [
       "linear-gradient(135deg, #18011F 0%, #7621B0 50%, #BBCCD7 100%)",
@@ -48,11 +48,11 @@ const projects = [
   },
   {
     number: "04",
-    category: "Mobile + AI",
+    category: "API Integration",
     name: "ION",
     tech: "Flutter, Firebase, Gemini API",
     description:
-      "Mental health and wellness guide that collects structured questionnaire responses and provides AI-assisted guidance through the Gemini API. Helping users navigate their mental wellness journey.",
+      "Mental wellness platform with structured data collection and cloud synchronization. Integrates with the Gemini API for AI-assisted guidance, featuring request/response parsing, prompt engineering, and secure API key management.",
     github: "https://github.com/iMufix/ION_APP",
     images: [
       "linear-gradient(135deg, #0C0C0C 0%, #18011F 50%, #B600A8 100%)",

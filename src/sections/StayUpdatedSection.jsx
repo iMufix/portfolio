@@ -2,12 +2,12 @@ import FadeIn from "../components/FadeIn";
 import { motion } from "framer-motion";
 
 const interests = [
-  { name: "Finance", icon: "📈" },
-  { name: "Tech Trends", icon: "⚡" },
-  { name: "Markets", icon: "🌐" },
-  { name: "Real-time News", icon: "📰" },
-  { name: "Startups", icon: "🚀" },
-  { name: "AI Updates", icon: "🤖" },
+  { name: "System Design", icon: "🏗️" },
+  { name: "API Patterns", icon: "🔗" },
+  { name: "Cloud Native", icon: "☁️" },
+  { name: "Database Architecture", icon: "🗄️" },
+  { name: "DevOps", icon: "⚙️" },
+  { name: "AI Integration", icon: "🤖" },
 ];
 
 export default function StayUpdatedSection() {
@@ -22,7 +22,7 @@ export default function StayUpdatedSection() {
             <div className="relative z-10">
               <p className="text-[#D7E2EA]/40 font-medium uppercase tracking-wider text-sm mb-3 text-center">Always Curious</p>
               <p className="text-[#D7E2EA] font-light text-center max-w-2xl mx-auto mb-8" style={{ fontSize: "clamp(1rem, 2vw, 1.25rem)" }}>
-                I stay plugged into the pulse of the world — tracking finance, tech trends, markets, real-time news, startups, and AI breakthroughs. Continuous learning keeps me ahead of the curve.
+                I stay plugged into the backend ecosystem — exploring system design patterns, API best practices, cloud infrastructure, and scalable architectures. Continuous learning keeps me ahead of the curve.
               </p>
               <div className="flex items-center justify-center gap-3 sm:gap-4 flex-wrap">
                 {interests.map((item) => (

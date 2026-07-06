@@ -3,33 +3,33 @@ import FadeIn from "../components/FadeIn";
 const skills = [
   {
     number: "01",
-    name: "Full Stack Development",
+    name: "Backend Architecture",
     description:
-      "Building complete web applications from frontend to backend using React, Node.js, Express, and databases. Delivering scalable, production-ready solutions.",
+      "Designing scalable server-side systems with layered architecture, middleware pipelines, and optimized request handling using Node.js, Express, and microservices patterns.",
   },
   {
     number: "02",
-    name: "Mobile Development",
+    name: "API Design & Development",
     description:
-      "Cross-platform mobile applications with Flutter and Dart. Firebase integration for real-time data, authentication, and cloud storage.",
+      "Building RESTful and GraphQL APIs with structured endpoints, input validation, rate limiting, and comprehensive error handling for reliable client-server communication.",
   },
   {
     number: "03",
-    name: "AI Integration",
+    name: "Database Engineering",
     description:
-      "Integrating OpenAI and Gemini APIs into applications for intelligent features. AI-powered diagnostics, chatbots, and content generation.",
+      "Schema design, indexing, and query optimization across SQL (PostgreSQL) and NoSQL (MongoDB) databases. Proficient in relationships, aggregations, and data integrity.",
   },
   {
     number: "04",
-    name: "UI/UX Design",
+    name: "System Design",
     description:
-      "Crafting intuitive, modern interfaces with attention to layout, typography, and user experience. Creating designs that convert and delight users.",
+      "Architecting distributed systems with load balancing, caching strategies, message queues, and horizontal scaling considerations. Focused on reliability, latency, and throughput.",
   },
   {
     number: "05",
-    name: "Backend Engineering",
+    name: "Cloud & DevOps",
     description:
-      "Robust server-side architecture with RESTful APIs, database design, and authentication. Experience with MongoDB, PostgreSQL, and Firebase.",
+      "Deploying and managing applications on cloud platforms. Experience with Docker containerization, CI/CD pipelines, environment configuration, and monitoring.",
   },
 ];
 

@@ -75,7 +75,7 @@ const hobbies = [
         <line x1="10" y1="9" x2="8" y2="9" />
       </svg>
     ),
-    desc: "Writing about tech trends & tools",
+    desc: "Writing about backend systems & APIs",
   },
 ];
 
