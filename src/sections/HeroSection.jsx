@@ -3,6 +3,7 @@ import FadeIn from "../components/FadeIn";
 import Magnet from "../components/Magnet";
 import ContactButton from "../components/ContactButton";
 import FlowingMenu from "../components/FlowingMenu";
+import resumePdf from "../resume.pdf";
 
 const navLinks = ["About", "Skills", "Projects", "Contact"];
 const roles = [
@@ -185,7 +186,7 @@ export default function HeroSection() {
         <FadeIn delay={0.5} y={20}>
           <div className="flex items-center gap-3 sm:gap-4">
             <a
-              href="/resume.pdf"
+              href={resumePdf}
               download
               className="rounded-full border-2 border-[#D7E2EA] px-6 py-3 sm:px-8 sm:py-3.5 text-xs sm:text-sm font-medium uppercase tracking-widest text-[#D7E2EA] cursor-pointer hover:bg-[#D7E2EA]/10 transition-colors duration-200"
             >
