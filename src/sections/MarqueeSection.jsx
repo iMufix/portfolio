@@ -36,14 +36,22 @@ function MarqueeCard({ tech }) {
         boxShadow: "0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.05)",
         border: "1px solid rgba(215, 226, 234, 0.08)",
       }}>
+      {/* 3D glow effect */}
       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-        style={{ background: "radial-gradient(circle at 50% 30%, rgba(182, 0, 168, 0.15) 0%, transparent 60%)" }} />
+        style={{
+          background: "radial-gradient(circle at 50% 30%, rgba(182, 0, 168, 0.15) 0%, transparent 60%)",
+        }}
+      />
+      {/* Top light line */}
       <div className="absolute top-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-[#B600A8]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
       <div className="relative z-10 flex flex-col items-center">
         <div className="w-16 h-16 sm:w-20 sm:h-20 mb-3 relative" style={{ filter: "drop-shadow(0 4px 12px rgba(0,0,0,0.5))", transform: "translateZ(0)" }}>
           <img src={tech.url} alt={tech.name} className={`w-full h-full object-contain transition-transform duration-300 group-hover:scale-110 ${tech.invert ? "invert" : ""}`} loading="lazy" />
         </div>
-        <span className="text-[#D7E2EA]/60 font-medium uppercase tracking-wider text-[10px] sm:text-xs group-hover:text-[#D7E2EA]/90 transition-colors duration-300">{tech.name}</span>
+        <span className="text-[#D7E2EA]/60 font-medium uppercase tracking-wider text-[10px] sm:text-xs group-hover:text-[#D7E2EA]/90 transition-colors duration-300">
+          {tech.name}
+        </span>
       </div>
     </div>
   );
@@ -53,6 +61,7 @@ export default function MarqueeSection() {
   return (
     <section className="bg-[#0C0C0C] pt-24 sm:pt-32 md:pt-40 pb-10 overflow-hidden">
       <div className="flex flex-col gap-4">
+        {/* Row 1 - moves RIGHT */}
         <div className="overflow-hidden">
           <div className="carousel-track flex gap-4 w-max">
             {double(row1).map((tech, i) => (
@@ -60,6 +69,8 @@ export default function MarqueeSection() {
             ))}
           </div>
         </div>
+
+        {/* Row 2 - moves LEFT */}
         <div className="overflow-hidden">
           <div className="carousel-track-reverse flex gap-4 w-max">
             {double(row2).map((tech, i) => (

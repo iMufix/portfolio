@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import LiveProjectButton from "../components/LiveProjectButton";
 import ProjectModal from "../components/ProjectModal";
